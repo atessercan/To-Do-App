@@ -1,0 +1,28 @@
+@import './../../styles/variables';
+
+.overlay {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+
+  .content {
+    position: fixed;
+    width: 350px;
+    height: 300px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    padding: 1rem;
+
+    input,
+    button {
+      box-shadow: 0 0 1px 1px #5aff3159;
+    }
+
+  }
+}

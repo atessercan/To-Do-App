@@ -1,0 +1,83 @@
+@import './../../styles/variables';
+
+.App-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding: 3.5rem 2rem 2rem 2rem;
+  margin-bottom: 2rem;
+  position: relative;
+
+  a {
+    text-decoration: none;
+    cursor: pointer;
+
+    &:visited {
+      color: inherit;
+    }
+  }
+
+  .greeting {
+    font-size: 3rem;
+
+  }
+
+  .name {
+    font-size: 3rem;
+    color: $name-color-light;
+    text-shadow: 0 0 2px $name-color-light;
+  }
+
+  .pipe {
+    font-size: 4rem;
+    font-weight: 100;
+    color: $pipe-color;
+  }
+
+  .motivate {
+    font-size: 1rem;
+    font-weight: 300;
+    text-shadow: 0 0 1px $name-color-light;
+    align-self: flex-end;
+  }
+
+  .logout-button {
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    width: 4.5rem;
+    height: 2rem;
+    font-size: 1rem;
+    border: 0px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+
+    &:hover {
+      opacity: .7;
+    }
+
+    &:focus {
+      outline: none;
+      opacity: .7;
+    }
+
+    &:disabled {
+      opacity: .4;
+      color: #fff;
+    }
+  }
+
+  .logout-button-dark {
+    background-color: $button-color-dark;
+  }
+
+  .logout-button-light {
+    background-color: $button-color-light;
+  }
+}

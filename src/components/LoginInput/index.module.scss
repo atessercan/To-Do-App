@@ -1,0 +1,56 @@
+@import './../../styles/variables';
+
+form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+
+  .text-input {
+    width: 80%;
+    height: 2.2rem;
+    padding: 1rem 5.5rem 1rem 1rem;
+    font-size: 1.5rem;
+    border: 0px;
+    border-radius: 10px 0 0 10px;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  .text-length {
+    position: absolute;
+    right: 7rem;
+    width: 5rem;
+    color: $text-color-dark;
+  }
+
+  button {
+    width: 3rem;
+    height: 2.2rem;
+    font-size: 1.5rem;
+    background-color: $button-color-dark;
+    border: 0px;
+    border-radius: 0 10px 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+    &:hover {
+      opacity: .7;
+    }
+
+    &:focus {
+      outline: none;
+      opacity: .7;
+    }
+
+    &:disabled {
+      opacity: .4;
+      color: #fff;
+    }
+  }
+}
