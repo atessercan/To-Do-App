@@ -3,7 +3,7 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 ## Live Demo
 - [To-Do App](https://to-do-app-plum-zeta.vercel.app/)
-## Feauters
+## Features
 
 - LocalStorage based login logic.
 - Sorting todo's by date.
