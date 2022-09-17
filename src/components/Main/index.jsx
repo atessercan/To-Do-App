@@ -134,7 +134,7 @@ const Main = () => {
   useEffect(()=>{
     (async()=> {
       const theme = await JSON.parse(localStorage.getItem("theme"));
-      setTheme(theme);
+      setTheme(theme || "dark");
     })();
   },[setTheme]);
 
