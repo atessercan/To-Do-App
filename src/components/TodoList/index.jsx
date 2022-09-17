@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useState } from "react";
 import DataContext from "../context/data-context";
 import ThemeContext from "../context/theme-context";
 import TodoItem from "../TodoItem";
+import useLocalStorage from '../Hooks/useLocalStorage';
 import { TbSortDescending, TbSortAscending } from "react-icons/tb";
 import { MdSettingsInputAntenna } from "react-icons/md";
 import {
@@ -18,7 +19,7 @@ const TodoList = () => {
   const { theme, setTheme } = useContext(ThemeContext);
   const [sort, setSort] = useState("asc");
   const [listType, setListType] = useState("all");
-
+  const [,setLocalStorage] = useLocalStorage("theme");
   const sortHandler = () => {
     if (sort === "asc") setSort("desc");
     else setSort("asc");
@@ -31,8 +32,16 @@ const TodoList = () => {
   };
 
   const themeChanger = () => {
-    if (theme === "dark") setTheme("light");
-    else setTheme("dark");
+    if (theme === "dark")
+    {
+      setTheme("light");
+      setLocalStorage("light");
+    }
+    else
+    {
+      setTheme("dark");
+      setLocalStorage("dark");
+    }
   };
 
   useEffect(() => {

@@ -1,4 +1,4 @@
-import React, { useCallback, useContext, useRef, useState } from "react";
+import React, { useCallback, useContext, useEffect, useRef, useState } from "react";
 import axios from "axios";
 import Header from "../Header";
 import Input from "../Input";
@@ -7,9 +7,11 @@ import TodoList from "../TodoList";
 import DataContext from "../context/data-context";
 import { CgLogIn } from "react-icons/cg";
 import styles from "./index.module.scss";
+import ThemeContext from '../context/theme-context';
 
 const Main = () => {
   const { name } = useContext(NameContext);
+  const { setTheme } = useContext(ThemeContext);
   const [todos, setTodos] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const idRef = useRef(null);
@@ -128,6 +130,13 @@ const Main = () => {
     deleteTodo,
     setIsLoading,
   };
+
+  useEffect(()=>{
+    (async()=> {
+      const theme = await JSON.parse(localStorage.getItem("theme"));
+      setTheme(theme);
+    })();
+  },[setTheme]);
 
   return (
     <>
