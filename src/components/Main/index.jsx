@@ -22,7 +22,7 @@ const Main = () => {
       setIsLoading(true);
       const response = await axios({
         method: "get",
-        url: "https://631c727d1b470e0e1201fa1b.mockapi.io/api/todos",
+        url: "https://6332fb62573c03ab0b55580e.mockapi.io/api/todos",
         responseType: "stream",
       });
       const todosArray = await response.data;
@@ -65,7 +65,7 @@ const Main = () => {
     try {
       await axios({
         method: "post",
-        url: "https://631c727d1b470e0e1201fa1b.mockapi.io/api/todos",
+        url: "https://6332fb62573c03ab0b55580e.mockapi.io/api/todos",
         data: {
           content: task,
           isCompleted: false,
@@ -84,7 +84,7 @@ const Main = () => {
     try {
       await axios({
         method: "put",
-        url: `https://631c727d1b470e0e1201fa1b.mockapi.io/api/todos/${todoId}`,
+        url: `https://6332fb62573c03ab0b55580e.mockapi.io/api/todos/${todoId}`,
         data: {
           isCompleted: newValue,
         },
@@ -102,7 +102,7 @@ const Main = () => {
       await axios({
         Authorization: "Bearer my-token",
         method: "delete",
-        url: `https://631c727d1b470e0e1201fa1b.mockapi.io/api/todos/${todoId}`,
+        url: `https://6332fb62573c03ab0b55580e.mockapi.io/api/todos/${todoId}`,
       });
       const newArr = [...todos].filter((item) => item.id !== todoId);
       setTodos(newArr);
