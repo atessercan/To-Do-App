@@ -1,6 +1,6 @@
 # To-Do App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This To-Do app takes todos as text input and store them in mockapi endpoint. 
 ## Live Demo
 - [To-Do App](https://to-do-app-plum-zeta.vercel.app/)
 ## Features
